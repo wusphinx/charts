@@ -275,7 +275,7 @@ proxy:
 # If expose the service via "ingress", the Nginx will not be used
 nginx:
   image:
-    repository: goharbor/nginx-photon
+    repository: dockerhub.azk8s.cn/goharbor/nginx-photon
     tag: dev
   replicas: 1
   # resources:
@@ -290,7 +290,7 @@ nginx:
 
 portal:
   image:
-    repository: goharbor/harbor-portal
+    repository: dockerhub.azk8s.cn/goharbor/harbor-portal
     tag: dev
   replicas: 1
 # resources:
@@ -305,7 +305,7 @@ portal:
 
 core:
   image:
-    repository: goharbor/harbor-core
+    repository: dockerhub.azk8s.cn/goharbor/harbor-core
     tag: dev
   replicas: 1
   ## Liveness probe values
@@ -336,7 +336,7 @@ core:
 
 jobservice:
   image:
-    repository: goharbor/harbor-jobservice
+    repository: dockerhub.azk8s.cn/goharbor/harbor-jobservice
     tag: dev
   replicas: 1
   maxJobWorkers: 10
@@ -359,7 +359,7 @@ jobservice:
 registry:
   registry:
     image:
-      repository: goharbor/registry-photon
+      repository: dockerhub.azk8s.cn/goharbor/registry-photon
       tag: dev
 
     # resources:
@@ -368,7 +368,7 @@ registry:
     #    cpu: 100m
   controller:
     image:
-      repository: goharbor/harbor-registryctl
+      repository: dockerhub.azk8s.cn/goharbor/harbor-registryctl
       tag: dev
 
     # resources:
@@ -406,7 +406,7 @@ chartmuseum:
   # Harbor defaults ChartMuseum to returning relative urls, if you want using absolute url you should enable it by change the following value to 'true'
   absoluteUrl: false
   image:
-    repository: goharbor/chartmuseum-photon
+    repository: dockerhub.azk8s.cn/goharbor/chartmuseum-photon
     tag: dev
   replicas: 1
   # resources:
@@ -423,7 +423,7 @@ clair:
   enabled: true
   clair:
     image:
-      repository: goharbor/clair-photon
+      repository: dockerhub.azk8s.cn/goharbor/clair-photon
       tag: dev
     # resources:
     #  requests:
@@ -431,7 +431,7 @@ clair:
     #    cpu: 100m
   adapter:
     image:
-      repository: goharbor/clair-adapter-photon
+      repository: dockerhub.azk8s.cn/goharbor/clair-adapter-photon
       tag: dev
     # resources:
     #  requests:
@@ -451,7 +451,7 @@ notary:
   enabled: true
   server:
     image:
-      repository: goharbor/notary-server-photon
+      repository: dockerhub.azk8s.cn/goharbor/notary-server-photon
       tag: dev
     replicas: 1
     # resources:
@@ -460,7 +460,7 @@ notary:
     #    cpu: 100m
   signer:
     image:
-      repository: goharbor/notary-signer-photon
+      repository: dockerhub.azk8s.cn/goharbor/notary-signer-photon
       tag: dev
     replicas: 1
     # resources:
@@ -486,7 +486,7 @@ database:
   type: internal
   internal:
     image:
-      repository: goharbor/harbor-db
+      repository: dockerhub.azk8s.cn/goharbor/harbor-db
       tag: dev
     # the image used by the init container
     initContainerImage:
@@ -534,7 +534,7 @@ redis:
   type: internal
   internal:
     image:
-      repository: goharbor/redis-photon
+      repository: dockerhub.azk8s.cn/goharbor/redis-photon
       tag: dev
     # resources:
     #  requests:
